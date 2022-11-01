@@ -1,16 +1,16 @@
 """
- This is an ATM Simulation Software.......
+**ATM class**
 
+The ATM class is the superclass for all other classes in this software.
+It contains the essential functionalities of the ATM Machine.
 """
 
+class ATM:
+    """The ATM class. """
 
-from ATM_prompt import prompt
+    __money = 500000
 
+    def __init__(self, money):
+        ATM.__money += money
 
-def main():
-    print(f"Inserting Card.......")
-    prompt()
-
-
-if __name__ == '__main__':
-    main()
+    

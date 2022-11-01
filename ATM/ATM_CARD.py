@@ -1,26 +1,20 @@
-class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance
+from bank_account import BankAccount
 
-    def deposit_cash(self, amount):
-        self.__balance += amount
+"""
+This is the ATM_CARD Module.
 
-    def withdraw_cash(self, amount):
-        if self.__balance >= amount:
-            self.__balance -= amount
-        else:
-            print(f'Insufficient fund')
-
-    def get_balance(self):
-        return self.__balance
-
+@AUTHOR: Gospel Isaac
+@email: gospelin.gi@gmail.com
+"""
 
 class AtmCard(BankAccount):
+    """
+    This is the ATM_CARD class.
+
+    This class embeds all the functionalites of a typical ATM_CARD.
+    """
 
     def __init__(self):
-        BankAccount.__init__(self, balance=None)
-        self.__password = None
-        self.__user_name = None
         pass
 
     #   Sets each user's password

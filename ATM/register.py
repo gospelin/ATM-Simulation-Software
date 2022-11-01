@@ -1,3 +1,10 @@
+"""
+Registration module.
+
+This module is concerned with all registration process and prompt.
+"""
+
+
 #   Register user's name
 def register_user_name(new_user):
     name = input("Enter your name: ")

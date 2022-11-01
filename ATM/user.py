@@ -1,11 +1,11 @@
 from sys import exit
 from register import register_user_name, register_user_password
-import ATM_CARD
+from ATM_CARD import AtmCard
 import ATM_prompt
 
 
 # Creates an ATM Card instance for a new user
-new_user = ATM_CARD.AtmCard()
+new_user = AtmCard()
 
 
 #   Registration of new user --> Prompt(1)

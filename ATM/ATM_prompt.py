@@ -26,19 +26,19 @@ def prompt():
         print(menu)
         reply = int(input())
 
-    if reply == 1:
-        # Register the users
-        user.register_user()
-    elif reply == 2:
-        user.check_details()
-    elif reply == 3:
-        user.change_password()
-    elif reply == 4:
-        user.deposit_cash()
-    elif reply == 5:
-        user.withdraw_cash()
-    elif reply == 6:
-        user.check_balance()
-    else:
-        print("Exiting program.....")
-        user.exit()
+    match reply:
+        case 1:
+            user.register_user()
+        case 2:
+            user.check_details()
+        case 3:
+            user.change_password()
+        case 4:
+            user.deposit_cash()
+        case 5:
+            user.withdraw_cash()
+        case 6:
+            user.check_balance()
+        case _:
+            print("Exiting program.....")
+            user.exit()
