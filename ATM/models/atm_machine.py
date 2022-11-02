@@ -8,9 +8,7 @@ It contains the essential functionalities of the ATM Machine.
 class ATM:
     """The ATM class. """
 
-    __money = 500000
+    money = 500000
 
-    def __init__(self, money):
-        ATM.__money += money
-
-    
+    def __init__(self, cash=0):
+        ATM.money += cash

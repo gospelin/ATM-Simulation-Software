@@ -1,14 +1,20 @@
-import user
+"""_summary_
+"""
+
+import sys
+from .user import check_details,\
+    change_password, create_user, deposit_cash, withdraw_cash, check_balance
 
 
 # Display a Welcome prompt message
 def prompt():
+    """_summary_"""
     menu = "Welcome to GIGO Bank....".upper() + \
         """
-        Select an Option: 
-        1.  Register a new user: 
-        2.  Check User Details:  
-        3.  Change password: 
+        Select an Option:
+        1.  Register a new user:
+        2.  Check User Details:
+        3.  Change password:
         4.  Deposit Cash:
         5.  Withdraw Cash:
         6.  Check Balance:
@@ -21,24 +27,24 @@ def prompt():
         reply = input()
     reply = int(reply)
 
-    while not (0 < reply <= 7):
+    while not 0 < reply <= 7:
         print("Invalid Input.....")
         print(menu)
         reply = int(input())
 
     match reply:
         case 1:
-            user.register_user()
+            create_user()
         case 2:
-            user.check_details()
+            check_details()
         case 3:
-            user.change_password()
+            change_password()
         case 4:
-            user.deposit_cash()
+            deposit_cash()
         case 5:
-            user.withdraw_cash()
+            withdraw_cash()
         case 6:
-            user.check_balance()
+            check_balance()
         case _:
             print("Exiting program.....")
-            user.exit()
+            sys.exit()

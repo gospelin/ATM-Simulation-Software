@@ -5,11 +5,13 @@ This is an ATM Simulation Software.......
 """
 
 
-from ATM_prompt import prompt
+from models.atm_prompt import prompt
 
 
 def main():
-    print(f"Inserting Card.......")
+    """_summary_
+    """
+    print("Inserting Card.......")
     prompt()
 
 
