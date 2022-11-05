@@ -14,7 +14,7 @@ class AtmCard(BankAccount):
     This class embeds all the functionalites of a typical ATM_CARD.
     """
 
-    def __init__(self, first_name, last_name, password):
+    def __init__(self, first_name="", last_name="", password=""):
         super().__init__(first_name, last_name)
         # self.account_number = super().account_number()
         self.password = password
