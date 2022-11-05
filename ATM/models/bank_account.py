@@ -36,8 +36,6 @@ class BankAccount(ATM):
 
     @first_name.setter
     def first_name(self, fname):
-        if fname.isdigit:
-            raise TypeError("Enter a valid name")
         self.__first_name = fname
 
     @property
@@ -51,8 +49,6 @@ class BankAccount(ATM):
 
     @last_name.setter
     def last_name(self, lname):
-        if lname.isdigit:
-            raise TypeError("Enter a valid name")
         self.__last_name = lname
 
 
