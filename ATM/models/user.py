@@ -21,8 +21,8 @@ def create_user():
 
     if new_user.first_name and new_user.password:
         print(
-            f"Welcome {new_user.first_name} {new_user.last_name}! \
-            You have successfully registered\n"
+            f"Welcome {new_user.first_name} {new_user.last_name}! "
+            f"You have successfully registered\n"
         )
     call_next_action()
 
@@ -30,7 +30,15 @@ def create_user():
 def register_user_name():
     """_summary_"""
     first_name = input("First Name: ")
+    while not first_name.isalpha():
+        print("Invalid name type")
+        first_name = input("First Name: ")
+
     last_name = input("Last Name: ")
+    while not last_name.isalpha():
+        print("Invalid name type")
+        last_name = input("Last Name: ")
+
     return first_name, last_name
 
 
@@ -62,11 +70,12 @@ def register_user_password():
 
     # If the password is validated accurately assign the
     # password to the user in the ATM_CARD class
-    if password == confirm_password:
-        return password
-    else:
+    if password != confirm_password:
         print("Password Mismatch...... Try again!!!")
         register_user_password()
+
+    return password
+
 
 
 #   Check User details --> Prompt(2)
@@ -77,8 +86,8 @@ def check_details():
         f"Your password is: {new_user.password}"
     )
     if (
-        new_user.first_name is None
-        or new_user.last_name is None
+        new_user.first_name == ""
+        or new_user.last_name == ""
         or new_user.password is None
     ):
         print("User details not set..... ")
